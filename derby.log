@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue Oct 03 18:39:22 CST 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-015e-e4d2-9f1e-000003d826c0 
+on database directory memory:/Users/awe/proj/software/mbl-i-130/testdb with class loader sun.misc.Launcher$AppClassLoader@2a139a55 
+Loaded from file:/Users/awe/.m2/repository/org/apache/derby/derby/10.13.1.1/derby-10.13.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_131-b11
+user.dir=/Users/awe/proj/software/mbl-i-130
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.12.6
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
