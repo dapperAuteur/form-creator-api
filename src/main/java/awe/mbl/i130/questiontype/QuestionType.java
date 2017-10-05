@@ -1,15 +1,14 @@
-package awe.mbl.i130.form;
+package awe.mbl.i130.questiontype;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Form {
+public class QuestionType {
 	
 	@Id
 	private String id;
 	private String name;
-	private String number;
 	/**
 	 * @return the id
 	 */
@@ -34,32 +33,27 @@ public class Form {
 	public void setName(String name) {
 		this.name = name;
 	}
-	/**
-	 * @return the number
-	 */
-	public String getNumber() {
-		return number;
-	}
-	/**
-	 * @param number the number to set
-	 */
-	public void setNumber(String number) {
-		this.number = number;
-	}
+	
 	/**
 	 * @param id
 	 * @param name
-	 * @param number
 	 */
-	
-	public Form() {
+	public QuestionType() {
 		
 	}
-	public Form(String id, String name, String number) {
+	public QuestionType(String id, String name) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.number = number;
+	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "QuestionType [id=" + id + ", name=" + name + ", getId()=" + getId() + ", getName()=" + getName()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
 	}
 	/* (non-Javadoc)
 	 * @see java.lang.Object#hashCode()
@@ -70,7 +64,6 @@ public class Form {
 		int result = 1;
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		result = prime * result + ((number == null) ? 0 : number.hashCode());
 		return result;
 	}
 	/* (non-Javadoc)
@@ -84,7 +77,7 @@ public class Form {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Form other = (Form) obj;
+		QuestionType other = (QuestionType) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -95,21 +88,6 @@ public class Form {
 				return false;
 		} else if (!name.equals(other.name))
 			return false;
-		if (number == null) {
-			if (other.number != null)
-				return false;
-		} else if (!number.equals(other.number))
-			return false;
 		return true;
 	}
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
-	public String toString() {
-		return "Form [id=" + id + ", name=" + name + ", number=" + number + ", getId()=" + getId() + ", getName()="
-				+ getName() + ", getNumber()=" + getNumber() + ", hashCode()=" + hashCode() + ", getClass()="
-				+ getClass() + ", toString()=" + super.toString() + "]";
-	}
-
 }

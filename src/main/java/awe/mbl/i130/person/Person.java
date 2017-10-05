@@ -1,27 +1,18 @@
-package awe.mbl.i130.user;
+package awe.mbl.i130.person;
 
-public class User {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Person {
 	
+	@Id
 	private String id;
 	private String email;
 	private String firstName;
 	private String middleName;
 	private String lastName;
 	
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", email=" + email + ", firstName=" + firstName + ", middleName=" + middleName
-				+ ", lastName=" + lastName + ", getId()=" + getId() + ", getEmail()=" + getEmail() + ", getFirstName()="
-				+ getFirstName() + ", getMiddleName()=" + getMiddleName() + ", getLastName()=" + getLastName()
-				+ ", hashCode()=" + hashCode() + ", getClass()=" + getClass() + ", toString()=" + super.toString()
-				+ "]";
-	}
-
-
-
 	/**
 	 * @return the id
 	 */
@@ -82,6 +73,7 @@ public class User {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+	
 	/**
 	 * @param id
 	 * @param email
@@ -90,11 +82,11 @@ public class User {
 	 * @param lastName
 	 */
 	
-	public User() {
+	public Person() {
 			
 		}
 
-	public User(String id, String email, String firstName, String middleName, String lastName) {
+	public Person(String id, String email, String firstName, String middleName, String lastName) {
 		super();
 		this.id = id;
 		this.email = email;
@@ -129,7 +121,7 @@ public class User {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		User other = (User) obj;
+		Person other = (Person) obj;
 		if (email == null) {
 			if (other.email != null)
 				return false;
@@ -158,5 +150,15 @@ public class User {
 		return true;
 	}
 	
-	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Person [id=" + id + ", email=" + email + ", firstName=" + firstName + ", middleName=" + middleName
+				+ ", lastName=" + lastName + ", getId()=" + getId() + ", getEmail()=" + getEmail() + ", getFirstName()="
+				+ getFirstName() + ", getMiddleName()=" + getMiddleName() + ", getLastName()=" + getLastName()
+				+ ", hashCode()=" + hashCode() + ", getClass()=" + getClass() + ", toString()=" + super.toString()
+				+ "]";
+	}
 }
